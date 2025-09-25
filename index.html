@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Mike Taylor III</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        /* Core palette */
+        --bg-navy: #0a192f; /* page background */
+        --bg-navy-2: #112240; /* section panels / hovers */
+        --text-light: #ccd6f6; /* headings / primary text */
+        --text-slate: #8892b0; /* body / secondary text */
+        --accent: #64ffda; /* links / highlights */
+
+        /* Bootstrap overrides (works in BS5) */
+        --bs-body-color: var(--text-slate);
+        --bs-body-bg: var(--bg-navy);
+        --bs-link-color: var(--accent);
+        --bs-link-hover-color: #a8fff0;
+        --bs-primary: var(--accent);
+        --bs-primary-rgb: 100, 255, 218; /* rgb for #64ffda */
+      }
+
+      /* Page base */
+      html,
+      body {
+        background: var(--bg-navy);
+        color: var(--text-slate);
+      }
+      .resume-section-content h1,
+      .resume-section-content h2,
+      .resume-section-content h3 {
+        color: var(--text-light);
+      }
+
+      /* Accent text */
+      .text-primary {
+        color: var(--accent) !important;
+      }
+
+      /* ================================
+   Navbar Base
+   ================================ */
+
+      /* Define an alternate navy tone (slightly lighter/darker than your current) */
+      :root {
+        --bg-navy: #0a192f; /* your original */
+        --bg-navy-alt: #112240; /* slightly lighter navy — adjust if needed */
+        --text-slate: #ccd6f6; /* existing text color */
+        --accent: #64ffda; /* your accent color */
+      }
+
+      /* Navbar container */
+      #sideNav {
+        background: var(
+          --bg-navy-alt
+        ) !important; /* use the slightly different tone */
+        border-right: 1px solid rgba(100, 255, 218, 0.12);
+      }
+
+      /* ================================
+   Nav Links
+   ================================ */
+      #sideNav .nav-link {
+        color: var(--text-slate) !important;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      #sideNav .nav-link:hover,
+      #sideNav .nav-link:focus {
+        color: var(--accent) !important;
+      }
+
+      /* Active section (ScrollSpy highlight) */
+      #sideNav .nav-link.active {
+        color: var(--accent) !important;
+        font-weight: 700;
+        position: relative;
+      }
+
+      #sideNav .nav-link.active::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.25rem;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+
+      /* ================================
+   Mobile Toggler
+   ================================ */
+      .navbar-toggler {
+        border-color: rgba(100, 255, 218, 0.35);
+      }
+
+      /* Force the hamburger icon lines to use your theme accent color (#64ffda) */
+      .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%2364ffda' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      /* Sections */
+      .resume-section {
+        background: transparent;
+      }
+      .resume-section-content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        /* remove bottom divider so panels don't get a double line */
+        border-bottom: none;
+      }
+
+      /* Reusable panel box */
+      .panel {
+        background: linear-gradient(
+          0deg,
+          rgba(17, 34, 64, 0.65),
+          rgba(17, 34, 64, 0.65)
+        );
+        border: 1px solid rgba(136, 146, 176, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.75rem;
+        box-shadow: 0 8px 24px rgba(2, 12, 27, 0.35);
+      }
+      /* Optional: constrain super-wide text for readability */
+      .panel > *:not(.social-icons) {
+        max-width: 70ch;
+      }
+
+      /* Paragraphs, lists */
+      p,
+      li {
+        color: var(--text-slate);
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Social icons */
+      /* Base state: theme slate */
+      .social-icons a.social-icon,
+      .social-icons a.social-icon i,
+      .social-icons a.social-icon svg,
+      .social-icons a.social-icon svg path {
+        color: var(--text-slate) !important;
+        fill: var(--text-slate) !important;
+        transition: color 0.3s ease, fill 0.3s ease, transform 0.2s ease;
+      }
+
+      /* Hover/focus: theme accent (teal) */
+      .social-icons a.social-icon:hover,
+      .social-icons a.social-icon:focus,
+      .social-icons a.social-icon:hover i,
+      .social-icons a.social-icon:focus i,
+      .social-icons a.social-icon:hover svg,
+      .social-icons a.social-icon:focus svg,
+      .social-icons a.social-icon:hover svg path,
+      .social-icons a.social-icon:focus svg path {
+        color: var(--accent) !important;
+        fill: var(--accent) !important;
+        transform: translateY(-2px);
+      }
+
+      /* Dates */
+      .flex-shrink-0 .text-primary {
+        opacity: 0.9;
+      }
+
+      /* HR line */
+      hr {
+        border-color: rgba(136, 146, 176, 0.2);
+      }
+
+      /* Buttons */
+      .btn-primary {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+      }
+      .btn-primary:hover {
+        background: rgba(100, 255, 218, 0.1);
+        color: #a8fff0;
+        border-color: #a8fff0;
+      }
+
+      /* Profile image ring */
+      .img-profile {
+        box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.35);
+      }
+
+      /* Lists with FontAwesome checkmarks—tint the checks */
+      .fa-ul .fa-check {
+        color: var(--accent);
+      }
+
+      /* “View / Download” resume links spacing */
+      #resume .fa-ul li a {
+        margin-left: 0.25rem;
+      }
+
+      /* Existing project/experience cards */
+      #projects .d-flex,
+      #experience .d-flex {
+        background: linear-gradient(
+          0deg,
+          rgba(17, 34, 64, 0.65),
+          rgba(17, 34, 64, 0.65)
+        );
+        border: 1px solid rgba(136, 146, 176, 0.2);
+        border-radius: 10px;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem !important;
+      }
+      #projects a,
+      #experience a {
+        color: var(--accent);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+        }
+      }
+
+      /* Mobile brand name (shown when the photo hides) */
+      .brand-name {
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        font-size: clamp(18px, 2.6vw, 28px); /* scales well on phones/tablets */
+        color: var(--text-light);
+      }
+      .brand-accent {
+        color: var(--accent);
+        text-shadow: 0 0 12px rgba(100, 255, 218, 0.15);
+      }
+
+      /* Make sure the toggler stays visible against your navy background */
+      .navbar-toggler {
+        border-color: rgba(100, 255, 218, 0.35);
+      }
+      .navbar-dark .navbar-toggler-icon {
+        /* keep Bootstrap’s icon; no custom filter needed */
+        background-image: var(--bs-navbar-toggler-icon-bg);
+      }
+      /* Highlight the active nav item (ScrollSpy) */
+      #sideNav .nav-link {
+        position: relative;
+        padding-left: 1rem;
+      }
+      #sideNav .nav-link.active {
+        color: var(--accent) !important;
+        font-weight: 700;
+      }
+      #sideNav .nav-link.active::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.25rem;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+
+      /* Force the mobile hamburger to match the theme accent */
+      #sideNav {
+        --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%2364ffda' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      /* (Optional but safe) ensure full coverage */
+      #sideNav .navbar-toggler-icon {
+        background-size: 100% 100%;
+      }
+
+      /* ================================
+   FINAL OVERRIDES (place last)
+   ================================ */
+
+      /* 1) HAMBURGER: border + icon in theme accent */
+      #sideNav .navbar-toggler {
+        border-color: var(--accent) !important;
+      }
+      #sideNav .navbar-toggler:hover,
+      #sideNav .navbar-toggler:focus {
+        border-color: #a8fff0 !important; /* your link-hover color */
+        box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+      }
+
+      /* Use your teal bars for the hamburger icon (already good, just ensure it wins) */
+      #sideNav {
+        --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%2364ffda' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      #sideNav .navbar-toggler-icon {
+        background-size: 100% 100%;
+        background-color: transparent; /* prevent any fill behind the bars */
+      }
+
+      /* 2) SOCIAL ICONS: force theme color, block red brand hover from base theme */
+      .social-icons a.social-icon,
+      .social-icons a.social-icon i,
+      .social-icons a.social-icon svg,
+      .social-icons a.social-icon svg path {
+        color: var(--text-slate) !important;
+        fill: var(--text-slate) !important;
+        background: transparent !important; /* neutralize any colored bg circle */
+        transition: color 0.3s ease, fill 0.3s ease, transform 0.2s ease;
+      }
+
+      /* Hover/focus in theme teal */
+      .social-icons a.social-icon:hover,
+      .social-icons a.social-icon:focus,
+      .social-icons a.social-icon:hover i,
+      .social-icons a.social-icon:focus i,
+      .social-icons a.social-icon:hover svg,
+      .social-icons a.social-icon:focus svg,
+      .social-icons a.social-icon:hover svg path,
+      .social-icons a.social-icon:focus svg path {
+        color: var(--accent) !important;
+        fill: var(--accent) !important;
+        background: transparent !important; /* stop any red/orange hover bg */
+        transform: translateY(-2px);
+      }
+
+      /* (Paranoid-style) nuke common brand hover colors from older Start Bootstrap themes */
+      .social-icons a.social-icon:hover .fa-facebook-f,
+      .social-icons a.social-icon:hover .fa-instagram,
+      .social-icons a.social-icon:hover .fa-linkedin-in,
+      .social-icons a.social-icon:hover .fa-github {
+        color: var(--accent) !important;
+      }
+    </style>
+  </head>
+  <body
+    id="page-top"
+    data-bs-spy="scroll"
+    data-bs-target="#sideNav"
+    data-bs-offset="80"
+    tabindex="0"
+  >
+    <!-- Navigation-->
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <!-- Mobile: styled name -->
+        <span class="d-block d-lg-none brand-name">
+          Mike <span class="brand-accent">Taylor III</span>
+        </span>
+        <!-- Desktop: photo -->
+        <span class="d-none d-lg-block">
+          <img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="assets/img/profile.jpg"
+            alt="Profile photo"
+          />
+        </span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience"
+              >Experience</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#teaching">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#football">Football</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+      <!-- About-->
+      <section class="resume-section" id="about">
+        <div class="resume-section-content">
+          <!-- Name + job title + contact OUTSIDE the panel -->
+          <h1 class="mb-0">
+            Mike <span class="text-primary">Taylor III</span>
+          </h1>
+
+          <!-- Job title -->
+          <div class="subheading mb-3 text-primary">
+            Data Scientist · AI/ML Engineer · Web Developer
+          </div>
+
+          <!-- Location + contact -->
+          <div class="subheading mb-5 text-primary">
+            New Orleans, Louisiana, USA · Based in Warsaw, Poland · +48 571 211
+            475 ·
+            <a href="mailto:miketayloriii15@gmail.com"
+              >miketayloriii15@gmail.com</a
+            >
+          </div>
+
+          <!-- Panel wraps just the bio + socials -->
+          <div class="panel">
+            <p class="lead mb-4">
+              I am an <strong>American citizen</strong>, born and raised in
+              <strong>Louisiana</strong>, who builds systems that ship—<strong
+                >data science projects</strong
+              >, <strong>machine learning solutions</strong>, and
+              <strong>AI software</strong> including
+              <strong>agentic AI agents</strong>. My approach is clear and
+              practical: understand the business problem, choose the right data
+              and models, and deliver a service people can trust in production.
+              I lead full end-to-end work— data pipelines, modeling and
+              evaluation, and deployment—using <strong>PyTorch</strong>,
+              <strong>scikit-learn</strong>, and
+              <strong>agentic AI</strong> stacks with CrewAI, LangChain, and the
+              OpenAI SDK. I enjoy turning complex, uncertain goals into
+              measurable wins while keeping reliability at the center.
+            </p>
+
+            <p class="lead mb-4">
+              I also founded the
+              <strong>All American School of English</strong> in Poland, where I
+              design and deliver Business and Technology English programs for
+              professionals. That mix—engineering, communication, and
+              leadership—defines how I work: calm under pressure, clear in
+              decisions, and relentless about impact. With U.S. roots and a
+              Warsaw base, I hold a Polish work/residence visa, bring a
+              <strong>B.S. in Computer Science</strong> and a near-complete
+              <strong>M.S. in Data Science</strong> (with a planned PhD in
+              <strong>Artificial Intelligence and Machine Learning</strong>),
+              and compete as a professional American football player—the same
+              discipline and teamwork I bring to every project.
+            </p>
+
+            <!-- Social icons -->
+            <div class="social-icons">
+              <a
+                class="social-icon"
+                href="https://www.linkedin.com/in/mike-taylor-iii-986b9910b/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://x.com/TaylornationMt3"
+                target="_blank"
+                rel="noopener"
+                aria-label="X (Twitter)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 1200 1227"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M714.163 519.284L1160.89 0H1053.9L671.29 442.36L356.054 0H0L468.982 681.729L0 1226.37H107.274L512.49 758.619L843.946 1226.37H1200L714.163 519.284ZM561.88 699.747L517.624 637.734L146.91 79.497H310.646L610.957 512.967L655.213 574.98L1053.92 1150.5H890.184L561.88 699.747Z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-icon"
+                href="https://www.facebook.com/profile.php?id=100001462571419"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://www.instagram.com/miketayloriii/?hl=en"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://www.tiktok.com/@miketayloriii"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+      <!-- Projects -->
+      <section class="resume-section" id="projects">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Projects</h2>
+
+          <!-- AI-Powered Sales Research & Email Agent -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">AI-Powered Sales Research & Email Agent</h3>
+              <div class="subheading mb-3">AI Project</div>
+              <p>
+                Built a <strong>multi-agent LLM workflow</strong> with three
+                agents and four models, including a “judge” model that evaluates
+                and selects the best sales email draft. Automated outreach for
+                my English teaching business with integrated
+                <strong>LLM-based auto-replies</strong>, reducing manual work
+                and improving engagement. Demonstrates advanced
+                <strong>agentic AI orchestration</strong> and practical business
+                automation.
+              </p>
+              <a
+                class="btn btn-theme btn-sm"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2024 – Present</span>
+            </div>
+          </div>
+
+          <!-- AI-Powered Company Research & Analysis Agent -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">AI-Powered Company Research & Analysis Agent</h3>
+              <div class="subheading mb-3">AI Project</div>
+              <p>
+                Developed an <strong>agentic AI research workflow</strong> with
+                CrewAI, featuring specialized researcher and analyst agents to
+                automate company and market research. Integrated
+                <strong>Resend API</strong> to deliver reports via email in
+                multiple formats (text, HTML, Markdown). Showcases
+                <strong>LLM tool integration</strong>, workflow automation, and
+                applied AI engineering for real business cases.
+              </p>
+              <a
+                class="btn btn-theme btn-sm"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2025 – Present</span>
+            </div>
+          </div>
+
+          <!-- Social Media Benchmarking Analysis -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Social Media Benchmarking Analysis</h3>
+              <div class="subheading mb-3">Data Science Project</div>
+              <p>
+                Engineered a <strong>TikTok insights scraper</strong> in Python
+                (Selenium + WebDriver Manager) to collect engagement metrics
+                (likes, comments, shares, hashtags). Designed analytics to
+                calculate optimal posting times, caption length effectiveness,
+                and hashtag performance. Automated
+                <strong>CSV exports</strong> for easy reporting. Helped increase
+                content engagement by <strong>30%</strong>.
+              </p>
+              <a
+                class="btn btn-theme btn-sm"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2025 – Present</span>
+            </div>
+          </div>
+
+          <!-- AI-Powered Deep Research Agent -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">AI-Powered Deep Research Agent</h3>
+              <div class="subheading mb-3">AI Project</div>
+              <p>
+                Built a <strong>multi-agent research pipeline</strong> that
+                plans, queries, summarizes, and iteratively refines results for
+                accuracy. Packaged with a <strong>Gradio UI</strong> for
+                interactive user refinement and integrated
+                <strong>Resend API</strong> for automated email delivery.
+                Highlights strong <strong>prompt engineering</strong> and
+                end-to-end AI product design.
+              </p>
+              <a
+                class="btn btn-theme btn-sm"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2024 – 2025</span>
+            </div>
+          </div>
+
+          <!-- Sickle Cell Image Classification -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Sickle Cell Image Classification</h3>
+              <div class="subheading mb-3">Deep Learning Project</div>
+              <p>
+                Preprocessed a medical image dataset from Uganda to remove
+                unclear samples, then trained a
+                <strong>CNN (TensorFlow/Keras)</strong> with Conv2D, MaxPooling,
+                Dense, and Dropout layers. Achieved
+                <strong>96% validation accuracy</strong>
+                across 30 epochs. Planned further improvements with data
+                augmentation and early stopping to boost generalization.
+              </p>
+              <a
+                class="btn btn-theme btn-sm"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2023 – 2024</span>
+            </div>
+          </div>
+
+          <!-- All American English Website Analytics -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">All American English Website Analytics</h3>
+              <div class="subheading mb-3">Web Project</div>
+              <p>
+                Designed and deployed a
+                <strong>full-stack learning platform</strong> (JavaScript,
+                Bootstrap, HTML/CSS) for lesson and content management. Built
+                interactive <strong>vocabulary quizzes</strong>, flashcards, and
+                analytics dashboards to track learner activity and outcomes.
+                Data-driven improvements increased client base by
+                <strong>25%</strong>.
+              </p>
+              <a
+                class="btn btn-theme btn-sm"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">2022 – Present</span>
+            </div>
+          </div>
+
+          <!-- Planned Projects -->
+          <h3 class="mt-5 mb-3">Planned Projects</h3>
+          <ul>
+            <li>
+              <strong>AI Software Engineering Team Agent</strong> — a
+              multi-agent system acting as a virtual software engineering team
+              (planner, coder, tester, reviewer) to assist developers in
+              designing and shipping production-grade applications.
+            </li>
+            <li>
+              <strong>AI Digital Twin Chatbot</strong> — a personal AI assistant
+              modeled after my professional expertise and style, capable of
+              answering questions about my projects, experience, and skills.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Custom button styling -->
+      <style>
+        .btn-theme {
+          background: transparent;
+          border: 1px solid var(--accent);
+          color: var(--accent);
+          font-weight: 500;
+          transition: all 0.2s ease-in-out;
+        }
+        .btn-theme:hover {
+          background: rgba(100, 255, 218, 0.1);
+          border-color: #a8fff0;
+          color: #a8fff0;
+          transform: translateY(-2px);
+        }
+      </style>
+
+      <!-- Skills-->
+      <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="panel">
+            <!-- Programming -->
+            <div class="subheading mb-3">
+              <i class="fas fa-code text-primary me-2"></i>
+              Programming Languages
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Python, JavaScript/Node.js, C++, SQL (PostgreSQL, MySQL), R
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Data stack: Pandas, NumPy, Matplotlib, Seaborn
+              </li>
+            </ul>
+
+            <!-- Machine Learning & Deep Learning -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-robot text-primary me-2"></i>
+              Machine Learning & Deep Learning
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Scikit-learn, XGBoost, Gradient Boosting, model evaluation &
+                tuning
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                TensorFlow/Keras, PyTorch (CNNs, RNNs, transfer learning)
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                NLP: spaCy, NLTK, BERT/Transformers (tokenization, embeddings,
+                fine-tuning)
+              </li>
+            </ul>
+
+            <!-- LLM & Agentic AI -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-brain text-primary me-2"></i>
+              LLMs & Agentic AI Workflows
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                GPT-4/5, Claude, Gemini; Groq/Ollama for local or low-latency
+                inference
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                CrewAI, LangChain, AutoGen, OpenAI SDK (tool use, memory,
+                evaluators, judges)
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                RAG pipelines, prompt engineering, performance & safety
+                validation
+              </li>
+            </ul>
+
+            <!-- Data Engineering & MLOps -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-database text-primary me-2"></i>
+              Data Engineering & MLOps
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                ETL/ELT pipelines, data cleaning/validation, feature engineering
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Model packaging, versioning, CI/CD, monitoring & evaluation in
+                production
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                MongoDB, Hadoop, scalable batch & streaming workflows
+              </li>
+            </ul>
+
+            <!-- Web, APIs & Apps -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-globe text-primary me-2"></i>
+              Web, APIs & App Delivery
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                React, Next.js, Flask/Django REST APIs; JSON/HTTP integrations;
+                email automation (Resend)
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Front-end: HTML/CSS, Bootstrap; interactive UIs (Gradio for AI
+                demos)
+              </li>
+            </ul>
+
+            <!-- Cloud & DevOps -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-cloud text-primary me-2"></i>
+              Cloud, DevOps & Systems
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Google Cloud, AWS; containerization & deployments with Docker
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Kubernetes (basic orchestration), CI/CD pipelines, GitHub
+                Actions
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Command Line, Git Bash, Windows PowerShell, Linux (Ubuntu)
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Virtual Machines (Vagrant, VirtualBox, VMware)
+              </li>
+            </ul>
+
+            <!-- Visualization & Analytics -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-chart-line text-primary me-2"></i>
+              Visualization & Analytics
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Tableau, Power BI, Excel; KPI design & insight storytelling
+              </li>
+            </ul>
+
+            <!-- Developer Tooling -->
+            <div class="subheading mb-3 mt-4">
+              <i class="fas fa-tools text-primary me-2"></i>
+              Developer Tooling
+            </div>
+            <ul class="fa-ul mb-0">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                VS Code, PyCharm, IntelliJ IDEA, Jupyter Notebook, Cursor IDE,
+                MCP
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Experience-->
+      <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Experience</h2>
+
+          <!-- All American School of English -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">
+                Founder · Data Scientist · Web Developer · Teacher
+              </h3>
+              <div class="subheading mb-3">
+                <i class="fas fa-school text-primary me-2"></i>
+                All American School of English — Warsaw, Poland
+              </div>
+              <ul>
+                <li>
+                  Founded and scaled a training company delivering Business,
+                  Technology, and General English to professionals across
+                  Poland; built repeatable programs for enterprise clients.
+                </li>
+                <li>
+                  Designed and shipped a full-stack learning platform
+                  (JavaScript, Bootstrap, HTML/CSS, Excel) with interactive
+                  quizzes, flashcards, and analytics dashboards to track learner
+                  outcomes.
+                </li>
+                <li>
+                  Increased enterprise client base by <strong>20%</strong> and
+                  improved retention by <strong>25%</strong> through targeted
+                  TikTok/Instagram campaigns, funnel analytics, and content A/B
+                  testing.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Jan 2020 – Present</span>
+            </div>
+          </div>
+
+          <!-- European League of Football -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Data Analyst · Professional Athlete</h3>
+              <div class="subheading mb-3">
+                <i class="fas fa-football-ball text-primary me-2"></i>
+                European League of Football — Berlin, Germany
+              </div>
+              <ul>
+                <li>
+                  Performed film analytics to identify formations, tendencies,
+                  and matchup advantages; delivered weekly briefs used by
+                  coaches for game planning.
+                </li>
+                <li>
+                  Improved defensive read accuracy by
+                  <strong>15%</strong> through systematic tagging, trend
+                  reporting, and scenario drills.
+                </li>
+                <li>
+                  Competed as a defensive lineman; translated analytical prep
+                  into on-field execution to optimize pressure, run fits, and
+                  in-game adjustments.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Jan 2020 – Present</span>
+            </div>
+          </div>
+
+          <!-- Georgetown Alumni Funds -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Data Analyst · Student Caller</h3>
+              <div class="subheading mb-3">
+                <i class="fas fa-phone-alt text-primary me-2"></i>
+                Georgetown Alumni Funds — Washington, D.C.
+              </div>
+              <ul>
+                <li>
+                  Maintained <strong>100%</strong> accuracy in daily fundraising
+                  performance reporting (Excel), enabling reliable campaign
+                  pacing and goal tracking.
+                </li>
+                <li>
+                  Executed high-volume alumni outreach; strengthened donor
+                  engagement and supported attainment of annual fundraising
+                  targets.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Aug 2017 – Dec 2019</span>
+            </div>
+          </div>
+
+          <!-- Georgetown University Football -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">NCAA Division I Football Player</h3>
+              <div class="subheading mb-3">
+                <i class="fas fa-university text-primary me-2"></i>
+                Georgetown University — Washington, D.C.
+              </div>
+              <ul>
+                <li>
+                  Completed 14+ hours/week of film study; delivered insights
+                  that sharpened defensive schemes and contributed to a
+                  <strong>15%</strong> improvement in unit performance.
+                </li>
+                <li>
+                  Supported off-field analysis of fan and stakeholder
+                  engagement, increasing community outreach and brand visibility
+                  by <strong>30%</strong>.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Jul 2015 – Dec 2019</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Resumes & CVs -->
+      <section class="resume-section" id="resume">
+        <div class="resume-section-content panel">
+          <h2 class="mb-5">Resumes &amp; CVs</h2>
+
+          <p>
+            View or download current documents below. For a tailored version or
+            a custom cover letter, contact
+            <a href="mailto:miketayloriii15@gmail.com"
+              >miketayloriii15@gmail.com</a
+            >
+            or WhatsApp/Cell: <strong>+48 571 211 475</strong>.
+          </p>
+
+          <ul class="fa-ul mb-0">
+            <!-- AI Engineer CV -->
+            <li class="mb-4">
+              <span class="fa-li"
+                ><i class="fas fa-file-pdf text-danger"></i
+              ></span>
+              <div
+                class="d-flex flex-column flex-md-row align-items-start justify-content-between"
+              >
+                <strong class="me-3 mb-2 mb-md-0">AI Engineer CV (2025)</strong>
+                <div>
+                  <a
+                    class="btn btn-primary btn-sm me-2"
+                    href="/assets/resume/Mike_Taylor_III_AI_Engineer_CV_2025.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="View AI Engineer CV 2025 online"
+                  >
+                    <i class="fas fa-external-link-alt me-1"></i> View Online
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-sm"
+                    href="/assets/resume/Mike_Taylor_III_AI_Engineer_CV_2025.pdf"
+                    download
+                    aria-label="Download AI Engineer CV 2025 as PDF"
+                  >
+                    <i class="fas fa-download me-1"></i> Download
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- AI Engineer Resume -->
+            <li class="mb-4">
+              <span class="fa-li"
+                ><i class="fas fa-file-pdf text-danger"></i
+              ></span>
+              <div
+                class="d-flex flex-column flex-md-row align-items-start justify-content-between"
+              >
+                <strong class="me-3 mb-2 mb-md-0"
+                  >AI Engineer Resume (2025)</strong
+                >
+                <div>
+                  <a
+                    class="btn btn-primary btn-sm me-2"
+                    href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2025.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="View AI Engineer Resume 2025 online"
+                  >
+                    <i class="fas fa-external-link-alt me-1"></i> View Online
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-sm"
+                    href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2025.pdf"
+                    download
+                    aria-label="Download AI Engineer Resume 2025 as PDF"
+                  >
+                    <i class="fas fa-download me-1"></i> Download
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Data Scientist & AI/ML Engineer CV -->
+            <li class="mb-4">
+              <span class="fa-li"
+                ><i class="fas fa-file-pdf text-danger"></i
+              ></span>
+              <div
+                class="d-flex flex-column flex-md-row align-items-start justify-content-between"
+              >
+                <strong class="me-3 mb-2 mb-md-0"
+                  >Data Scientist &amp; AI/ML Engineer CV (2025)</strong
+                >
+                <div>
+                  <a
+                    class="btn btn-primary btn-sm me-2"
+                    href="/assets/resume/Mike_Taylor_III_Data_Scientist_AI_ML_Engineer_CV_2025.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="View Data Scientist and AI/ML Engineer CV 2025 online"
+                  >
+                    <i class="fas fa-external-link-alt me-1"></i> View Online
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-sm"
+                    href="/assets/resume/Mike_Taylor_III_Data_Scientist_AI_ML_Engineer_CV_2025.pdf"
+                    download
+                    aria-label="Download Data Scientist and AI/ML Engineer CV 2025 as PDF"
+                  >
+                    <i class="fas fa-download me-1"></i> Download
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Data Scientist & AI/ML Engineer Resume -->
+            <li class="mb-4">
+              <span class="fa-li"
+                ><i class="fas fa-file-pdf text-danger"></i
+              ></span>
+              <div
+                class="d-flex flex-column flex-md-row align-items-start justify-content-between"
+              >
+                <strong class="me-3 mb-2 mb-md-0"
+                  >Data Scientist &amp; AI/ML Engineer Resume (2025)</strong
+                >
+                <div>
+                  <a
+                    class="btn btn-primary btn-sm me-2"
+                    href="/assets/resume/Mike_Taylor_III_Data_Scientist_AI_ML_Engineer_Resume_2025.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="View Data Scientist and AI/ML Engineer Resume 2025 online"
+                  >
+                    <i class="fas fa-external-link-alt me-1"></i> View Online
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-sm"
+                    href="/assets/resume/Mike_Taylor_III_Data_Scientist_AI_ML_Engineer_Resume_2025.pdf"
+                    download
+                    aria-label="Download Data Scientist and AI/ML Engineer Resume 2025 as PDF"
+                  >
+                    <i class="fas fa-download me-1"></i> Download
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Data Analyst Resume -->
+            <li>
+              <span class="fa-li"
+                ><i class="fas fa-file-pdf text-danger"></i
+              ></span>
+              <div
+                class="d-flex flex-column flex-md-row align-items-start justify-content-between"
+              >
+                <strong class="me-3 mb-2 mb-md-0"
+                  >Data Analyst Resume (2025)</strong
+                >
+                <div>
+                  <a
+                    class="btn btn-primary btn-sm me-2"
+                    href="/assets/resume/Mike_Taylor_III_Data_Analyst_Resume_2025.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="View Data Analyst Resume 2025 online"
+                  >
+                    <i class="fas fa-external-link-alt me-1"></i> View Online
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-sm"
+                    href="/assets/resume/Mike_Taylor_III_Data_Analyst_Resume_2025.pdf"
+                    download
+                    aria-label="Download Data Analyst Resume 2025 as PDF"
+                  >
+                    <i class="fas fa-download me-1"></i> Download
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Blog -->
+      <section class="resume-section" id="blog">
+        <div class="resume-section-content">
+          <div class="panel">
+            <h2 class="mb-4">Blog</h2>
+            <p class="mb-4">
+              I recently started sharing my thoughts on
+              <strong>Substack</strong>, writing about my journey as an
+              <strong>AI/ML Engineer</strong>, <strong>Data Scientist</strong>,
+              and <strong>web developer</strong>. You’ll also find reflections
+              on my life as a
+              <strong>professional American football player in Europe</strong>,
+              lessons from building technology-driven projects, and occasional
+              posts about <strong>space exploration</strong> — a passion I’ve
+              had since childhood. My blog is a mix of technology, sports,
+              learning, and big ideas, written for anyone curious about how
+              these worlds connect.
+            </p>
+            <a
+              class="btn btn-theme btn-sm"
+              href="https://substack.com/@miketayloriii"
+              target="_blank"
+              rel="noopener"
+            >
+              Visit My Substack
+            </a>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Teaching -->
+      <section class="resume-section" id="teaching">
+        <div class="resume-section-content panel">
+          <h2 class="mb-5">Teaching & Language Training</h2>
+
+          <p>
+            I am the founder of the
+            <strong>All American School of English</strong>, a professional
+            language training service that helps individuals and companies
+            succeed in <strong>international work environments</strong>. I
+            design and deliver specialized programs in
+            <strong>Business English</strong>,
+            <strong>Technology English</strong>, and
+            <strong>General English</strong> for professionals, including
+            software developers, managers, and corporate teams. My clients
+            include leading companies in Poland such as
+            <strong>PayPo</strong> and <strong>Coca-Cola</strong>.
+          </p>
+
+          <p>
+            My approach combines clear, practical communication with a strong
+            understanding of global business culture and technology. Courses
+            focus on
+            <strong>effective email writing</strong>,
+            <strong>presentations</strong>,
+            <strong>technical communication</strong>, and
+            <strong>negotiation skills</strong> — all tailored to real-world
+            work situations. I also build <strong>custom programs</strong> for
+            companies, aligning language learning with business objectives.
+          </p>
+
+          <p>
+            For more details about the school’s services, visit the official
+            website:
+            <a
+              href="https://allamericanschoolofenglish.onrender.com/index.html"
+              target="_blank"
+              rel="noopener"
+            >
+              All American School of English</a
+            >.
+          </p>
+
+          <p>
+            I run the school together with my fiancée,
+            <strong>Aleksandra Anna Kazala</strong>, a professional volleyball
+            player in Europe. Aleksandra brings her own expertise as an
+            <strong>English teacher</strong> and serves as our
+            <strong>social media and content coordinator</strong>, helping us
+            connect with learners and share valuable insights about language,
+            culture, and professional growth.
+          </p>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Football -->
+      <section class="resume-section" id="football">
+        <div class="resume-section-content panel">
+          <h2 class="mb-5">Professional American Football Career</h2>
+
+          <p>
+            I am an
+            <strong>American football player from Louisiana</strong> with a
+            career spanning <strong>top European leagues</strong> and the NCAA
+            Division I level in the United States. My journey began at
+            <strong>Caddo Middle Magnet</strong> (2010–2012) in Shreveport,
+            where I played running back and competed in track and basketball. At
+            <strong>C.E. Byrd High School</strong> (2012–2015), I transitioned
+            to defensive end while continuing as a multi-sport athlete.
+          </p>
+
+          <p>
+            In 2015, I committed to <strong>Georgetown University</strong> to
+            play <strong>NCAA Division I football</strong>. Originally recruited
+            as a linebacker, I later moved to defensive end, developing as both
+            a pass rusher and run stopper. After completing my college career in
+            December 2019, I began playing professionally in Europe in 2020 and
+            have since competed across several of its most competitive leagues.
+          </p>
+
+          <div class="subheading mb-3">Positions &amp; Coaching Roles</div>
+          <p>
+            <strong>Primary positions:</strong> Defensive End and Defensive
+            Tackle, with expertise in quarterback pressure, run defense, and
+            backfield disruption.
+            <br />
+            <strong>Additional playing roles:</strong> Running Back, Fullback,
+            Tight End, and Special Teams.
+            <br />
+            <strong>Coaching experience:</strong> Defensive Coordinator,
+            Linebackers Coach, and Defensive Line Coach — mentoring players,
+            designing defensive schemes, and leading position drills.
+          </p>
+
+          <div class="subheading mb-3">Teams</div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>Berlin Adler — German Football League (2020)</li>
+                <li>Tychy Falcons — Poland Football League (2020)</li>
+                <li>Badalona Dracs — Spanish Football League (2021)</li>
+                <li>Bahçeşehir Lions — Turkish Football League (2021)</li>
+                <li>Cologne Centurions — European League of Football (2021)</li>
+                <li>Traun Steelsharks — Austrian Football League (2022)</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Frankfurt Universe — German Football League (2022)</li>
+                <li>Traun Steelsharks — Austrian Football League (2023)</li>
+                <li>Hildesheim Invaders — German Football League (2024)</li>
+                <li>Budapest Titans — Hungarian Football League (2025)</li>
+                <li>Berlin Thunder — European League of Football (2025)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subheading mb-3 mt-4">Highlights &amp; Media</div>
+          <div class="d-flex flex-wrap gap-2">
+            <a
+              class="btn btn-primary btn-sm"
+              href="https://www.hudl.com/video/3/1538185/5721c2400c5e68122497898e"
+              target="_blank"
+              rel="noopener"
+            >
+              High School Highlights
+            </a>
+            <a
+              class="btn btn-primary btn-sm"
+              href="https://www.youtube.com/watch?v=rw2UGudS3hE"
+              target="_blank"
+              rel="noopener"
+            >
+              Georgetown NCAA D1 Highlights
+            </a>
+            <a
+              class="btn btn-primary btn-sm"
+              href="https://www.youtube.com/watch?v=kEeTR5_flxw&feature=youtu.be"
+              target="_blank"
+              rel="noopener"
+            >
+              Professional Highlights #1
+            </a>
+            <a
+              class="btn btn-primary btn-sm"
+              href="https://www.youtube.com/watch?v=VX0mUDXM0WQ"
+              target="_blank"
+              rel="noopener"
+            >
+              Professional Highlights #2
+            </a>
+          </div>
+
+          <p class="mt-4">
+            For additional details about my career and the European football
+            scene, visit my Europlayers profile:
+          </p>
+          <a
+            class="btn btn-outline-primary btn-sm mt-2"
+            href="https://www.europlayers.com/ViewProfilePlayer.aspx?ProfileId=72240"
+            target="_blank"
+            rel="noopener"
+          >
+            View Europlayers Profile
+          </a>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!-- Contact -->
+      <section class="resume-section" id="contact">
+        <div class="resume-section-content">
+          <div class="panel">
+            <h2 class="mb-4">Contact</h2>
+
+            <p class="mb-4">
+              I’m open to new <strong>career opportunities</strong>,
+              <strong>collaborations</strong>, and
+              <strong>professional connections</strong>. If you’d like to
+              discuss a project, job opportunity, or partnership, you can reach
+              me directly by email at
+              <a href="mailto:miketayloriii15@gmail.com" class="fw-bold">
+                miketayloriii15@gmail.com
+              </a>
+              or by Cell / WhatsApp at
+              <strong>+48&nbsp;571&nbsp;211&nbsp;475</strong>.
+            </p>
+
+            <p class="mb-4">
+              You can also find me on the platforms below for professional
+              networking, open-source contributions, and updates on my work:
+            </p>
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+              <a
+                class="social-icon"
+                href="https://www.linkedin.com/in/mike-taylor-iii-986b9910b/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://github.com/miketayloriii15"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://x.com/TaylornationMt3"
+                target="_blank"
+                rel="noopener"
+                aria-label="X (Twitter)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 1200 1227"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M714.163 519.284L1160.89 0H1053.9L671.29 442.36L356.054 0H0L468.982 681.729L0 1226.37H107.274L512.49 758.619L843.946 1226.37H1200L714.163 519.284ZM561.88 699.747L517.624 637.734L146.91 79.497H310.646L610.957 512.967L655.213 574.98L1053.92 1150.5H890.184L561.88 699.747Z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-icon"
+                href="https://www.facebook.com/profile.php?id=100001462571419"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://www.instagram.com/miketayloriii/?hl=en"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="social-icon"
+                href="https://www.tiktok.com/@miketayloriii"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+    </div>
+    <!-- Bootstrap core JS (required for the mobile navbar toggler) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Auto-collapse the mobile menu after clicking a nav link
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapseEl = document.getElementById("navbarResponsive");
+
+        document.querySelectorAll("#sideNav .nav-link").forEach((link) => {
+          link.addEventListener("click", () => {
+            // Only collapse on mobile/tablet widths
+            if (window.innerWidth < 992 && collapseEl) {
+              const bsCollapse =
+                bootstrap.Collapse.getInstance(collapseEl) ||
+                new bootstrap.Collapse(collapseEl, { toggle: false });
+              bsCollapse.hide();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
