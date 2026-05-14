@@ -3,11 +3,13 @@ import { useInView } from '../hooks/useInView'
 
 const responsibilities = [
   'Design and deploy enterprise-grade LLM systems and intelligent agent workflows',
-  'Lead development of CookGPT, an internal AI platform powered by LLMs, RAG, and agentic orchestration',
+  'Serve as one of the lead developers on CookGPT, an internal AI platform powered by LLMs, RAG, and agentic orchestration',
   'Architect retrieval-augmented generation pipelines for internal knowledge access at scale',
   'Build and maintain the Enterprise AI Evaluation Framework for production readiness assessment',
   'Assess hallucination risk, retrieval quality, guardrail behavior, and responsible AI compliance',
   'Drive AI governance practices and responsible deployment standards across the organization',
+  'Mentor colleagues on AI engineering best practices and responsible AI development',
+  'Educate and train company leaders on how to effectively use AI through hands-on workshops',
   'Translate technology strategy into operational AI systems that support organizational transformation',
 ]
 

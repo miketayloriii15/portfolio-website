@@ -65,7 +65,7 @@ const iconColors = [
   { bg: 'rgba(59,130,246,0.1)', text: '#60a5fa', dot: '#3b82f6' },
   { bg: 'rgba(34,197,94,0.1)', text: '#4ade80', dot: '#22c55e' },
   { bg: 'rgba(6,182,212,0.1)', text: '#22d3ee', dot: '#06b6d4' },
-  { bg: 'rgba(249,115,22,0.1)', text: '#fb923c', dot: '#f97316' },
+  { bg: 'rgba(99,102,241,0.1)', text: '#818cf8', dot: '#6366f1' },
 ]
 
 export default function Education() {
