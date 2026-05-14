@@ -139,21 +139,24 @@ export default function About() {
 
             <div className="flex flex-col gap-4 text-slate-300 leading-relaxed">
               <p>
-                I'm a Generative AI Engineer focused on bringing enterprise AI from prototype to production.
-                My work sits at the intersection of large language models, intelligent agent systems,
-                retrieval-augmented generation, and responsible deployment — designing systems that are
-                not just powerful, but safe, reliable, and organizationally transformative.
+                I'm Mike Taylor III, a Generative AI Engineer II at Cook Medical focused on enterprise AI
+                systems, LLM evaluation, intelligent agents, and responsible AI deployment. Originally from
+                Shreveport, I'm also a former NCAA Division I athlete and professional American football
+                player in Europe.
               </p>
               <p>
-                At Cook Medical, I design, build, evaluate, and deploy enterprise AI systems that support
-                internal workflows, decision-making, and operational efficiency at scale. I lead the
-                engineering of production-grade LLM platforms, agent orchestration frameworks, and
-                the evaluation infrastructure required to govern them responsibly.
+                Before moving fully into AI and technology, I founded and operated my own English teaching
+                company in Poland, where I worked with professionals and technical teams. My background
+                combines generative AI, data science, full-stack development, and enterprise technology
+                strategy.
               </p>
               <p>
-                My background spans history, computer science, data science, and an ongoing PhD in
-                AI and Machine Learning — giving me a unique lens that combines technical depth with
-                strategic and humanistic thinking about how AI changes organizations.
+                I'm currently completing a Technology MBA and working toward a PhD in Technology focused on
+                Artificial Intelligence and Machine Learning. I also speak some Polish and German.
+              </p>
+              <p>
+                Outside of work, I enjoy researching space and the universe, studying emerging technologies,
+                and powerlifting.
               </p>
             </div>
 
@@ -166,7 +169,8 @@ export default function About() {
                 'LLM Evaluation',
                 'Responsible AI',
                 'AI Strategy',
-                'Production AI',
+                'NCAA Athlete',
+                'Multilingual',
               ].map((tag) => (
                 <span key={tag} className="badge badge-blue">{tag}</span>
               ))}
