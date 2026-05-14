@@ -32,7 +32,7 @@ const contactItems = [
   },
   {
     icon: Phone,
-    label: 'PL Phone',
+    label: 'PL / Europe Phone',
     value: '+48 571 211 479',
     href: 'tel:+48571211479',
     color: 'cyan',
@@ -250,11 +250,39 @@ export default function Contact() {
       </div>
 
       {/* Footer */}
-      <div className="section-container mt-20">
-        <div className="section-divider mb-8" />
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-600 text-xs">
-          <span>© 2025 Mike Taylor III. All rights reserved.</span>
-          <span>Generative AI Engineer · Indianapolis, Indiana</span>
+      <div className="section-container mt-24">
+        <div className="section-divider mb-10" />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Left: Brand */}
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold text-white"
+                style={{ background: 'linear-gradient(135deg, #3b82f6, #06b6d4)' }}>
+                MT
+              </div>
+              <span className="text-white font-display font-semibold text-sm">Mike Taylor III</span>
+            </div>
+            <p className="text-slate-600 text-xs">Generative AI Engineer II · Cook Medical</p>
+            <p className="text-slate-700 text-xs">Indianapolis, Indiana</p>
+          </div>
+
+          {/* Center: Quick nav */}
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            {['About', 'Role', 'Projects', 'Skills', 'Education', 'Contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => document.querySelector(`#${item.toLowerCase()}`)?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-slate-600 hover:text-slate-400 text-xs transition-colors"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+
+          {/* Right: Copyright */}
+          <p className="text-slate-700 text-xs text-center md:text-right">
+            © {new Date().getFullYear()} Mike Taylor III.<br className="hidden md:block" /> All rights reserved.
+          </p>
         </div>
       </div>
     </section>
