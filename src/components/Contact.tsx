@@ -170,7 +170,7 @@ export default function Contact() {
             </h2>
             <p className="section-subheading mx-auto text-center">
               Interested in enterprise AI, collaboration, or just want to talk technology?
-              Reach out — I'm always open to meaningful conversations.
+              Reach out. I'm always open to meaningful conversations.
             </p>
           </div>
 

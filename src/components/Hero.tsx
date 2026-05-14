@@ -145,6 +145,7 @@ export default function Hero() {
           {[
             'Enterprise LLMs',
             'AI Agents',
+            'Agentic AI',
             'LLM Evaluation',
             'RAG Systems',
             'Responsible AI',

@@ -94,7 +94,7 @@ export default function AIEvaluation() {
             </div>
             <p className="text-slate-400 text-base leading-relaxed">
               I built an enterprise-grade AI Evaluation Framework at Cook Medical to systematically assess
-              LLM systems across eight critical production-readiness dimensions — before they ever touch
+              LLM systems across eight critical production-readiness dimensions before they ever touch
               a live environment.
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function AIEvaluation() {
               <p className="text-slate-400 text-sm leading-relaxed">
                 A structured evaluation system that assesses AI systems across eight dimensions before
                 production deployment. The framework generates quantitative scores, qualitative risk reports,
-                and actionable remediation guidance — enabling data-driven go/no-go decisions for enterprise
+                and actionable remediation guidance to support data-driven go/no-go decisions for enterprise
                 AI releases.
               </p>
             </div>

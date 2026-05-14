@@ -19,7 +19,7 @@ const education = [
     status: 'In Progress',
     statusColor: 'blue',
     description:
-      'Technology-focused MBA program integrating business strategy, technology leadership, and organizational management — building the strategic lens that complements deep technical expertise.',
+      'Technology-focused MBA program integrating business strategy, technology leadership, and organizational management, building the strategic lens that complements deep technical expertise.',
     icon: GraduationCap,
   },
   {
@@ -29,7 +29,7 @@ const education = [
     status: 'Completed',
     statusColor: 'green',
     description:
-      'Graduate-level training in statistical modeling, machine learning, data engineering, and applied AI — forming the quantitative foundation for AI engineering work.',
+      'Graduate-level training in statistical modeling, machine learning, data engineering, and applied AI that forms the quantitative foundation for AI engineering work.',
     icon: GraduationCap,
   },
   {
@@ -39,7 +39,7 @@ const education = [
     status: 'Completed',
     statusColor: 'green',
     description:
-      'Undergraduate computer science education covering algorithms, systems, programming paradigms, and software engineering — the technical bedrock.',
+      'Undergraduate computer science education covering algorithms, systems, programming paradigms, and software engineering. The technical bedrock of my engineering work.',
     icon: GraduationCap,
   },
   {
@@ -49,7 +49,7 @@ const education = [
     status: 'Completed',
     statusColor: 'green',
     description:
-      'An analytical humanities degree developing critical thinking, research rigor, and the ability to understand systemic change over time — perspectives that inform how I think about AI and organizational transformation.',
+      'An analytical humanities degree developing critical thinking, research rigor, and the ability to understand systemic change over time. These perspectives directly inform how I think about AI and organizational transformation.',
     icon: BookOpen,
   },
 ]
