@@ -124,7 +124,7 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-slate-200 mb-2">
             Generative AI Engineer II
           </p>
-          <div className="flex items-center justify-center gap-2 text-slate-400 text-base">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-slate-400 text-sm sm:text-base">
             <span className="w-1 h-1 rounded-full bg-blue-400" />
             <span>Cook Medical</span>
             <span className="w-1 h-1 rounded-full bg-slate-600" />

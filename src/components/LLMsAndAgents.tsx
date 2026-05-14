@@ -14,7 +14,7 @@ const capabilities = [
     icon: Bot,
     title: 'Intelligent Agent Systems',
     description:
-      'Multi-step AI agents capable of autonomous reasoning, tool use, and complex task execution — designed for enterprise-grade reliability, traceability, and safe operation.',
+      'Multi-step AI agents capable of autonomous reasoning, tool use, and complex task execution. Built for enterprise-grade reliability, traceability, and safe operation.',
     tags: ['Agentic Workflows', 'Tool Use', 'Orchestration', 'ReAct / CoT'],
     color: 'purple',
   },
@@ -22,7 +22,7 @@ const capabilities = [
     icon: Database,
     title: 'Retrieval-Augmented Generation',
     description:
-      'RAG pipelines that connect LLMs to organizational knowledge — vector databases, hybrid search, semantic chunking, and context-aware retrieval for accurate, grounded responses.',
+      'RAG pipelines that connect LLMs to organizational knowledge through vector databases, hybrid search, semantic chunking, and context-aware retrieval for accurate, grounded responses.',
     tags: ['Vector Search', 'Embeddings', 'Semantic Chunking', 'Hybrid Retrieval'],
     color: 'cyan',
   },
@@ -30,7 +30,7 @@ const capabilities = [
     icon: Network,
     title: 'Agent Orchestration',
     description:
-      'Multi-agent architectures where specialized AI agents collaborate, delegate, and coordinate — enabling sophisticated workflows that exceed single-model capabilities.',
+      'Multi-agent architectures where specialized AI agents collaborate, delegate, and coordinate to enable sophisticated workflows that exceed single-model capabilities.',
     tags: ['Multi-Agent', 'LangChain', 'Autogen', 'CrewAI'],
     color: 'indigo',
   },
@@ -46,7 +46,7 @@ const capabilities = [
     icon: Zap,
     title: 'Production Readiness',
     description:
-      'End-to-end deployment pipelines from prototype to production — covering CI/CD for AI, monitoring, observability, latency optimization, and operational reliability.',
+      'End-to-end deployment pipelines from prototype to production, covering CI/CD for AI, monitoring, observability, latency optimization, and operational reliability.',
     tags: ['MLOps', 'Observability', 'Monitoring', 'Latency Optimization'],
     color: 'orange',
   },

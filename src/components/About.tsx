@@ -76,7 +76,7 @@ export default function About() {
             </div>
 
             {/* Social links */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2">
               {socialLinks.map(({ icon: Icon, label, href, color }) => (
                 <a
                   key={label}
@@ -174,8 +174,8 @@ export default function About() {
               <p>
                 I'm Mike Taylor III, a Generative AI Engineer II at Cook Medical focused on enterprise AI
                 systems, LLM evaluation, intelligent agents, and responsible AI deployment. Originally from
-                Shreveport, I'm also a former NCAA Division I athlete and professional American football
-                player in Europe.
+                Shreveport, Louisiana, I'm also a former NCAA Division I athlete and professional American
+                football player in Europe.
               </p>
               <p>
                 Before moving fully into AI and technology, I founded and operated my own English teaching
