@@ -170,7 +170,7 @@ export default function Hero() {
             Get In Touch
           </a>
           <a
-            href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2025.pdf"
+            href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2026_1.pdf"
             target="_blank"
             rel="noreferrer"
             className="btn-secondary px-8 py-4 text-base"

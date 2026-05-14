@@ -235,7 +235,7 @@ export default function Contact() {
                   Download my full AI Engineering resume to learn more about my background, skills, and experience.
                 </p>
                 <a
-                  href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2025.pdf"
+                  href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2026_1.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-primary w-full justify-center"

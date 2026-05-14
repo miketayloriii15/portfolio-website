@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2025.pdf"
+              href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2026_1.pdf"
               target="_blank"
               rel="noreferrer"
               className="hidden sm:inline-flex btn-primary text-xs px-4 py-2"
@@ -138,7 +138,7 @@ export default function Navbar() {
           ))}
           <div className="mt-4 pt-4 border-t border-white/5">
             <a
-              href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2025.pdf"
+              href="/assets/resume/Mike_Taylor_III_AI_Engineer_Resume_2026_1.pdf"
               target="_blank"
               rel="noreferrer"
               className="btn-primary w-full justify-center"
