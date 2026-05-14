@@ -42,7 +42,7 @@ const skillCategories = [
     color: 'orange',
     skills: [
       'Azure', 'AWS', 'GCP',
-      'Azure OpenAI', 'Docker', 'Kubernetes',
+      'Azure OpenAI', 'Palantir Foundry', 'Docker', 'Kubernetes',
       'CI/CD', 'MLflow', 'Weights & Biases',
     ],
   },
@@ -60,7 +60,7 @@ const skillCategories = [
     color: 'indigo',
     skills: [
       'Python', 'TypeScript', 'JavaScript',
-      'SQL', 'Bash', 'R',
+      'Node.js', 'C++', 'SQL', 'Bash', 'R',
       'REST APIs', 'FastAPI', 'Pydantic',
     ],
   },
