@@ -50,13 +50,13 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/miketayloriii',
+    href: 'https://www.linkedin.com/in/mike-taylor-iii-986b9910b/',
     description: 'Connect professionally',
   },
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/miketayloriii',
+    href: 'https://github.com/miketayloriii15',
     description: 'View projects & code',
   },
   {

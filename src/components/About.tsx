@@ -5,13 +5,13 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/miketayloriii',
+    href: 'https://www.linkedin.com/in/mike-taylor-iii-986b9910b/',
     color: 'hover:text-blue-400',
   },
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/miketayloriii',
+    href: 'https://github.com/miketayloriii15',
     color: 'hover:text-slate-200',
   },
 ]
