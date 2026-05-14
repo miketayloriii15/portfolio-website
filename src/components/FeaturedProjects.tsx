@@ -1,4 +1,4 @@
-import { ExternalLink, Bot, FlaskConical, Network, BookOpen, Shield } from 'lucide-react'
+import { ExternalLink, Bot, FlaskConical, Network, BookOpen, Shield, Languages, Globe } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 
 const projects = [
@@ -56,6 +56,28 @@ const projects = [
     status: 'Ongoing',
     statusColor: 'purple',
     highlight: false,
+  },
+  {
+    icon: Languages,
+    title: 'AI-Powered Translation Platform',
+    subtitle: 'Human-in-the-Loop Translation System',
+    description:
+      'Leading development of an AI translation application built on approved translation documents and a managed network of professional translators. The system features a multi-layer validation pipeline that scores translation quality, enforces consistency against approved source materials, and keeps human translators in the loop — ensuring accuracy, auditability, and compliance at every stage.',
+    tags: ['AI Translation', 'Human-in-the-Loop', 'Validation Pipeline', 'Quality Scoring', 'RAG'],
+    status: 'In Development',
+    statusColor: 'blue',
+    highlight: true,
+  },
+  {
+    icon: Globe,
+    title: 'AI Sustainability Questionnaire Agent',
+    subtitle: 'Agentic Workflow Automation',
+    description:
+      'Leading development of an AI-powered platform where an intelligent agent autonomously completes and distributes sustainability questionnaires to target companies. The agent executes a structured workflow, populates legally binding compliance documents, and routes completed submissions to the appropriate organizations — reducing manual effort while maintaining legal traceability and auditability.',
+    tags: ['AI Agent', 'Workflow Automation', 'Sustainability', 'Legal Compliance', 'Agentic AI'],
+    status: 'In Development',
+    statusColor: 'blue',
+    highlight: true,
   },
 ]
 

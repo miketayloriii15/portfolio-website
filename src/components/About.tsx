@@ -123,7 +123,7 @@ export default function About() {
                 </svg>
               </a>
               <a
-                href="https://miketayloriii.substack.com"
+                href="https://substack.com/@miketayloriii"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Substack"
