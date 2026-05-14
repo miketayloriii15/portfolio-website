@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mike-taylor-iii-portfolio
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: false
+    domains:
+      - miketayloriii.com
+      - www.miketayloriii.com
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
