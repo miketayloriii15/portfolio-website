@@ -4,7 +4,7 @@ import { useInView } from '../hooks/useInView'
 const education = [
   {
     degree: 'Doctor of Philosophy (PhD)',
-    field: 'Technology — Artificial Intelligence & Machine Learning',
+    field: 'Technology, Artificial Intelligence & Machine Learning',
     university: 'Walsh College',
     status: 'In Progress',
     statusColor: 'purple',

@@ -262,25 +262,34 @@ export default function Contact() {
               </div>
               <span className="text-white font-display font-semibold text-sm">Mike Taylor III</span>
             </div>
-            <p className="text-slate-600 text-xs">Generative AI Engineer II · Cook Medical</p>
-            <p className="text-slate-700 text-xs">Indianapolis, Indiana</p>
+            <p className="text-slate-500 text-xs">Generative AI Engineer II · Cook Medical</p>
+            <p className="text-slate-600 text-xs">Indianapolis, Indiana</p>
           </div>
 
           {/* Center: Quick nav */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-            {['About', 'Role', 'Projects', 'Skills', 'Education', 'Contact'].map((item) => (
+            {[
+              { label: 'About', id: 'about' },
+              { label: 'Role', id: 'role' },
+              { label: 'LLMs & Agents', id: 'llms' },
+              { label: 'AI Evaluation', id: 'evaluation' },
+              { label: 'Projects', id: 'projects' },
+              { label: 'Skills', id: 'skills' },
+              { label: 'Education', id: 'education' },
+              { label: 'Contact', id: 'contact' },
+            ].map(({ label, id }) => (
               <button
-                key={item}
-                onClick={() => document.querySelector(`#${item.toLowerCase()}`)?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-600 hover:text-slate-400 text-xs transition-colors"
+                key={id}
+                onClick={() => document.querySelector(`#${id}`)?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-slate-500 hover:text-slate-300 text-xs transition-colors"
               >
-                {item}
+                {label}
               </button>
             ))}
           </div>
 
           {/* Right: Copyright */}
-          <p className="text-slate-700 text-xs text-center md:text-right">
+          <p className="text-slate-500 text-xs text-center md:text-right">
             © {new Date().getFullYear()} Mike Taylor III.<br className="hidden md:block" /> All rights reserved.
           </p>
         </div>

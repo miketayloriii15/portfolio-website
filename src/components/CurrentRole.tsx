@@ -81,7 +81,7 @@ export default function CurrentRole() {
                 {/* Highlight pills */}
                 <div className="flex flex-col gap-2 pt-2">
                   {highlights.map(({ label, value }) => (
-                    <div key={label} className="flex items-center justify-between py-2 px-3 rounded-lg bg-white/3 border border-white/5">
+                    <div key={label} className="flex items-center justify-between py-2 px-3 rounded-lg bg-white/5 border border-white/5">
                       <span className="text-slate-500 text-xs">{label}</span>
                       <span className="text-slate-300 text-xs font-medium">{value}</span>
                     </div>

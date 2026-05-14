@@ -98,8 +98,8 @@ export default function Hero() {
       {/* Gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-10"
         style={{ background: 'radial-gradient(circle, #3b82f6, transparent)' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px] opacity-8"
-        style={{ background: 'radial-gradient(circle, #06b6d4, transparent)' }} />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px]"
+        style={{ background: 'radial-gradient(circle, #06b6d4, transparent)', opacity: 0.08 }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[160px] opacity-5"
         style={{ background: 'radial-gradient(circle, #8b5cf6, transparent)' }} />
 
